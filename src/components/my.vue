@@ -1,16 +1,16 @@
 <template>
-  <div>
     <div>
-      {{ name }} {{ name2 }} {{ number }}
+        <div>
+            {{ name }} {{ name2 }} {{ number }}
+        </div>
+        <div>
+            <mu-button v-on:click="increment" class="but" color="blue">Inc</mu-button>
+        </div>
+        <div>
+            <mu-button v-on:click="decrement" class="but" color="blue">Dec</mu-button>
+        </div>
+        <MyChildComp cnt="100" />
     </div>
-    <div>
-      <mu-button v-on:click="increment" class="but" color="blue">Inc</mu-button>
-    </div>
-    <div>
-      <mu-button v-on:click="decrement" class="but" color="blue">Dec</mu-button>
-    </div>
-    <MyChildComp cnt="100"/>
-  </div>
 </template>
 
 <script>
