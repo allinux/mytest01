@@ -1,10 +1,13 @@
 <template>
   <div>
     <div>
-      {{ name }} {{ name2 }}
+      {{ name }} {{ name2 }} {{ number }}
     </div>
     <div>
-      <mu-button class="but" color="blue">One</mu-button>
+      <mu-button v-on:click="increment" class="but" color="blue">Inc</mu-button>
+    </div>
+    <div>
+      <mu-button v-on:click="decrement" class="but" color="blue">Dec</mu-button>
     </div>
     <MyChildComp cnt="100"/>
   </div>
@@ -32,8 +35,19 @@ export default {
 			name: (() => {
 				return [...Array(10).keys()].reduce((a, b) => a + b);
 			})(),
-			name2: f()
+			name2: f(),
+			number: 0
 		};
+	},
+	methods: {
+		increment: function() {
+			// 인스턴스 내부의 데이터모델에 접근 할 땐,
+			// this 를 사용한다
+			this.number++;
+		},
+		decrement: function() {
+			this.number--;
+		}
 	},
 	components: { MyChildComp }
 };
