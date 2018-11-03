@@ -41,8 +41,6 @@ export default {
 	},
 	methods: {
 		increment: function() {
-			// 인스턴스 내부의 데이터모델에 접근 할 땐,
-			// this 를 사용한다
 			this.number++;
 		},
 		decrement: function() {
