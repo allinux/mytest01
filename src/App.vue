@@ -1,20 +1,24 @@
 <template>
-  <div id="app">
-    <img width="25%" src="logo.png">
-    <HelloWorld cccc="2222fgf"/>
-    <my/>
-  </div>
+    <div id="app">
+        <img width="25%" src="logo.png">
+        <HelloWorld cccc="2222fgf" />
+        <my />
+
+        <mystate />
+    </div>
 </template>
 
 <script>
 import HelloWorld from "./components/HelloWorld";
 import my from "./components/my";
+import mystate from "./components/mystate";
 
 export default {
 	name: "App2",
 	components: {
 		HelloWorld,
-		my
+		my,
+		mystate
 	}
 };
 </script>

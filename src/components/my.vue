@@ -21,10 +21,15 @@ var MyChildComp = {
 	name: "MyChildComp",
 	data() {
 		return {
-			mydata: "Yhjung"
+			mydata: "Yhjung..."
 		};
 	},
-	template: "<div>{{mydata}} {{cnt}}</div>",
+	template: `
+    <div>
+        <div>{{ mydata }} {{ cnt }}</div>
+        <div>input: <input type='text' v-model='mydata'/></div>
+    </div>
+    `,
 	props: ["cnt"]
 };
 
