@@ -4,21 +4,21 @@
         <HelloWorld cccc="2222fgf" />
         <my />
 
-        <mystate />
+        <MyState />
     </div>
 </template>
 
 <script>
 import HelloWorld from "./components/HelloWorld";
 import my from "./components/my";
-import mystate from "./components/mystate";
+import MyState from "./components/MyState1";
 
 export default {
 	name: "App2",
 	components: {
 		HelloWorld,
 		my,
-		mystate
+		MyState
 	}
 };
 </script>
